@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여자 가르마 SMP | 서아름 두피문신</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: #222;
+            background-color: #fafafa;
+        }
+
+        :root {
+            --primary: #FFD600;
+            --primary-dark: #E6C200;
+            --primary-light: #FFF8DC;
+            --text-dark: #111;
+            --text-medium: #444;
+            --text-light: #777;
+            --bg-white: #ffffff;
+            --bg-light: #f7f7f7;
+            --bg-dark: #111;
+            --border-light: #e5e5e5;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ==================== 히어로 섹션 ==================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            padding: 70px 50px;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 24px;
+            max-width: 700px;
+            margin: 0 24px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.88);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 32px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            line-height: 1.55;
+            letter-spacing: 0.01em;
+            margin-bottom: 28px;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+        }
+
+        /* ==================== 공통 섹션 스타일 ==================== */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-number {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            letter-spacing: 0.15em;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .divider {
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+            margin: 0 auto;
+        }
+
+        /* ==================== 문제 제기 섹션 ==================== */
+        .problem {
+            background: var(--bg-white);
+        }
+
+        .problem-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .problem-intro p {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .problem-intro strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .worry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .worry-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .worry-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .worry-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 1.3rem;
+        }
+
+        .worry-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        .emphasis-block {
+            background: var(--bg-dark);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .emphasis-block p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .emphasis-block .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* ==================== 분위기 영상 섹션 ==================== */
+        .mood-video-section {
+            position: relative;
+            height: 45vh;
+            min-height: 300px;
+            max-height: 500px;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .mood-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .mood-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+            pointer-events: none;
+        }
+
+        /* ==================== 솔루션 섹션 ==================== */
+        .solution {
+            background: var(--bg-light);
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .solution-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 36px 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .solution-number {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            flex-shrink: 0;
+        }
+
+        .solution-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .solution-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .solution-summary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .solution-summary p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .solution-summary strong {
+            font-weight: 700;
+        }
+
+        /* ==================== 제한 섹션 ==================== */
+        .limitation {
+            background: var(--bg-white);
+        }
+
+        .limitation-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .limitation-list {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .limitation-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .limitation-item:last-child {
+            border-bottom: none;
+        }
+
+        .limitation-icon {
+            width: 32px;
+            height: 32px;
+            background: #fee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c44;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .limitation-item p {
+            font-size: 1rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .limitation-message {
+            padding: 40px;
+        }
+
+        .limitation-message h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .limitation-message p {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .limitation-badge {
+            display: inline-block;
+            background: var(--primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* ==================== FAQ 섹션 ==================== */
+        .faq {
+            background: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .faq-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 36px 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .faq-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-q {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .faq-q-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            flex-shrink: 0;
+        }
+
+        .faq-q h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+
+        .faq-a strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* ==================== 갤러리 섹션 ==================== */
+        .gallery {
+            background: var(--bg-white);
+        }
+
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-tab {
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-tab.active,
+        .gallery-tab:hover {
+            background: var(--text-dark);
+            color: white;
+            border-color: var(--text-dark);
+        }
+
+        .gallery-category {
+            margin-bottom: 60px;
+        }
+
+        .gallery-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .gallery-category-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .gallery-category-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background: var(--bg-light);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 20px;
+            border: 2px dashed var(--border-light);
+            transition: all 0.3s ease;
+            gap: 8px;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .gallery-item-icon {
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+
+        /* ==================== CTA 섹션 ==================== */
+        .cta {
+            background: var(--bg-dark);
+            padding: 100px 0;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            background: rgba(255,214,0,0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 28px;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-sub {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: block;
+            padding: 18px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--text-dark);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,214,0,0.3);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: rgba(255,255,255,0.7);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* ==================== 푸터 ==================== */
+        footer {
+            background: #0a0a0a;
+            padding: 50px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .footer-info {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ==================== 반응형 ==================== */
+        @media (max-width: 1024px) {
+            .worry-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .limitation-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 50px 32px;
+                margin: 0 16px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.5;
+            }
+
+            .hero-sub {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .worry-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .worry-card {
+                padding: 24px 16px;
+            }
+
+            .emphasis-block {
+                padding: 36px 24px;
+            }
+
+            .emphasis-block p {
+                font-size: 1.1rem;
+            }
+
+            .solution-card {
+                padding: 28px 24px;
+            }
+
+            .gallery-tabs {
+                flex-wrap: wrap;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 40px 24px;
+                margin: 0 12px;
+                border-radius: 16px;
+            }
+
+            .hero-badge {
+                padding: 8px 18px;
+                font-size: 0.8rem;
+                margin-bottom: 24px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                line-height: 1.5;
+            }
+
+            .hero-sub {
+                font-size: 0.95rem;
+            }
+
+            .worry-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .gallery-tab {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">여자 가르마 SMP 전문</span>
+            <h1>탈모는 아닌데,<br>가르마가 유난히 비어 보이는 날이<br>있지 않나요?</h1>
+            <p class="hero-sub">파우더, 스프레이, 볼륨펌으로 버티는 단계를 지나셨다면</p>
+        </div>
+    </section>
+
+    <!-- 문제 제기 -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PROBLEM</span>
+                <h2 class="section-title">SMP, 결정이 어려운 이유</h2>
+                <p class="section-subtitle">가르마가 신경 쓰이기 시작했다면, 이미 가리는 단계는 지나온 상태일 겁니다</p>
+            </div>
+
+            <div class="problem-intro">
+                <p>문제는 SMP가 해결일지, 더 신경 쓰일 선택일지<br><strong>확신이 없다는 것.</strong></p>
+            </div>
+
+            <div class="worry-grid">
+                <div class="worry-card">
+                    <div class="worry-icon">👁</div>
+                    <h4>가까이서 보면<br>티 나지 않을까</h4>
+                </div>
+                <div class="worry-card">
+                    <div class="worry-icon">⚫</div>
+                    <h4>점처럼<br>보이진 않을까</h4>
+                </div>
+                <div class="worry-card">
+                    <div class="worry-icon">⏳</div>
+                    <h4>시간이 지나면<br>번지진 않을까</h4>
+                </div>
+                <div class="worry-card">
+                    <div class="worry-icon">💭</div>
+                    <h4>괜히 했다가<br>더 신경 쓰이진 않을까</h4>
+                </div>
+            </div>
+
+            <div class="emphasis-block">
+                <p>가르마 SMP는 하고 싶어서가 아니라<br><span class="highlight">무서워서 망설이게 되는 시술</span>이기 때문입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 분위기 영상 섹션 -->
+    <section class="mood-video-section">
+        <video class="mood-video" autoplay muted loop playsinline preload="metadata" loading="lazy">
+            <source src="consulting .mp4" type="video/mp4">
+        </video>
+        <div class="mood-video-overlay"></div>
+    </section>
+
+    <!-- 해결책 -->
+    <section class="solution">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">STANDARD</span>
+                <h2 class="section-title">여자 가르마 SMP의 기준</h2>
+                <p class="section-subtitle">머리숱을 만들어 보이게 하는 시술이 아닙니다</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-number">01</div>
+                    <div class="solution-content">
+                        <h4>두피 톤에 맞는 색 농도</h4>
+                        <p>개인별 두피 색상을 분석하여 자연스러운 농도 설계</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">02</div>
+                    <div class="solution-content">
+                        <h4>실제 모근 간격 기준 점 배치</h4>
+                        <p>기존 모발 패턴을 분석한 자연스러운 간격 설계</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">03</div>
+                    <div class="solution-content">
+                        <h4>가르마 이동을 고려한 흐름 설계</h4>
+                        <p>헤어 스타일 변화에도 자연스러운 결과 유지</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">04</div>
+                    <div class="solution-content">
+                        <h4>번지지 않도록 조절된 밀도</h4>
+                        <p>시간이 지나도 선명함을 유지하는 깊이 조절</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-summary">
+                <p>가르마 SMP의 핵심은<br><strong>'얼마나 채우느냐'가 아니라 '얼마나 안 보이느냐'</strong>입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 제한/기준 -->
+    <section class="limitation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">POLICY</span>
+                <h2 class="section-title">모든 분께 맞는 것은 아닙니다</h2>
+            </div>
+
+            <div class="limitation-layout">
+                <div class="limitation-list">
+                    <div class="limitation-item">
+                        <div class="limitation-icon">×</div>
+                        <p>두피가 많이 예민한 경우</p>
+                    </div>
+                    <div class="limitation-item">
+                        <div class="limitation-icon">×</div>
+                        <p>탈모 진행 속도가 빠른 경우</p>
+                    </div>
+                    <div class="limitation-item">
+                        <div class="limitation-icon">×</div>
+                        <p>가르마 라인이 자주 크게 바뀌는 경우</p>
+                    </div>
+                </div>
+
+                <div class="limitation-message">
+                    <h3>무조건 가능하다고<br>말하지 않는 것</h3>
+                    <p>이런 경우에는 SMP보다 다른 선택이 먼저일 수 있습니다. 상담 시 정확한 진단을 통해 적합 여부를 먼저 안내드립니다.</p>
+                    <span class="limitation-badge">그것이 가르마 SMP의 첫 번째 기준입니다</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">FAQ</span>
+                <h2 class="section-title">자주 묻는 질문</h2>
+                <p class="section-subtitle">시술 전 가장 많이 궁금해하시는 부분</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-q">
+                        <span class="faq-q-icon">Q</span>
+                        <h4>티 나지 않을까요?</h4>
+                    </div>
+                    <p class="faq-a">티 나는 경우는 대부분 점 크기와 간격 설계가 잘못된 경우입니다. 가르마 SMP는 멀리서의 효과보다 <strong>가까이에서 보이지 않는 것이 기준</strong>입니다.</p>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-q">
+                        <span class="faq-q-icon">Q</span>
+                        <h4>시간이 지나면 번지지 않나요?</h4>
+                    </div>
+                    <p class="faq-a">과한 색 농도와 깊이는 번짐의 원인이 됩니다. 여자 가르마 SMP는 <strong>옅고 여러 번에 나눠 완성하는 방식</strong>이 기본입니다.</p>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-q">
+                        <span class="faq-q-icon">Q</span>
+                        <h4>괜히 했다가 후회하진 않을까요?</h4>
+                    </div>
+                    <p class="faq-a">후회의 대부분은 시술 자체보다 <strong>설명 부족</strong>에서 시작됩니다. 그래서 시술보다 먼저 적합 여부와 기대치를 먼저 안내합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 갤러리 -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PORTFOLIO</span>
+                <h2 class="section-title">시술 사례</h2>
+            </div>
+
+            <div class="gallery-tabs">
+                <span class="gallery-tab active">전체</span>
+                <span class="gallery-tab">두피 SMP</span>
+                <span class="gallery-tab">눈썹 문신</span>
+                <span class="gallery-tab">잔흔 제거</span>
+            </div>
+
+            <div class="gallery-category">
+                <h3 class="gallery-category-title">두피 SMP</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3 class="gallery-category-title">눈썹 문신</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-category">
+                <h3 class="gallery-category-title">잔흔 제거</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                    <div class="gallery-item">
+                        <span class="gallery-item-icon">+</span>
+                        이미지 추가
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-content">
+            <span class="cta-badge">무료 상담</span>
+            <h2>내 가르마가 SMP에 적합한지<br>먼저 확인해보세요.</h2>
+            <p class="cta-sub">시술 권유보다 기준과 판단부터 안내합니다.</p>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">가르마 SMP 상담 신청하기</a>
+                <a href="#" class="btn btn-ghost">시술 전 체크 포인트 안내받기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-brand">서아름 두피문신</span>
+                <span class="footer-info">© 2025 All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
