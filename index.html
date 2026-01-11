@@ -99,13 +99,25 @@
         }
 
         .hero h1 {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 600;
             color: #FFFFFF;
-            line-height: 1.45;
+            line-height: 1.55;
             letter-spacing: -0.01em;
             margin-bottom: 16px;
             word-break: keep-all;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 모바일 전용 줄바꿈 */
+        .mobile-br {
+            display: inline;
+        }
+
+        .desktop-br {
+            display: none;
         }
 
         .hero-sub {
@@ -638,6 +650,28 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
+        /* ==================== 슬로건 섹션 ==================== */
+        .slogan-section {
+            background: var(--bg-white);
+            padding: 72px 16px 56px;
+            text-align: center;
+        }
+
+        .slogan-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.6;
+            letter-spacing: -0.02em;
+            max-width: 280px;
+            margin: 0 auto;
+            word-break: keep-all;
+        }
+
+        .slogan-text .line {
+            display: block;
+        }
+
         /* ==================== 푸터 ==================== */
         footer {
             background: #0a0a0a;
@@ -691,6 +725,15 @@
                 font-size: 2rem;
                 line-height: 1.45;
                 margin-bottom: 20px;
+                max-width: none;
+            }
+
+            .mobile-br {
+                display: none;
+            }
+
+            .desktop-br {
+                display: inline;
             }
 
             .hero-sub {
@@ -915,6 +958,16 @@
             .btn {
                 padding: 17px 28px;
                 font-size: 1rem;
+            }
+
+            /* 슬로건 */
+            .slogan-section {
+                padding: 88px 28px 64px;
+            }
+
+            .slogan-text {
+                font-size: 1.75rem;
+                max-width: none;
             }
 
             /* 푸터 */
@@ -1248,6 +1301,15 @@
                 color: var(--primary);
             }
 
+            /* 슬로건 */
+            .slogan-section {
+                padding: 100px 48px 72px;
+            }
+
+            .slogan-text {
+                font-size: 2rem;
+            }
+
             /* 푸터 */
             footer {
                 padding: 50px 48px;
@@ -1288,7 +1350,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="hero-badge">여자 가르마 SMP 전문</span>
-            <h1>탈모는 아닌데,<br>가르마가 유난히 비어 보이는 날이<br>있지 않나요?</h1>
+            <h1>탈모는 아닌데,<br class="mobile-br">가르마가 유난히<br class="mobile-br">비어 보이는 날이<br>있지 않나요?</h1>
             <p class="hero-sub">파우더, 스프레이, 볼륨펌으로 버티는 단계를 지나셨다면</p>
         </div>
     </section>
@@ -1536,6 +1598,14 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- 슬로건 -->
+    <section class="slogan-section">
+        <p class="slogan-text">
+            <span class="line">자연스러움이</span>
+            <span class="line">자신감이 되는 곳</span>
+        </p>
     </section>
 
     <!-- CTA -->
