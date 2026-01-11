@@ -485,6 +485,19 @@
             display: block;
         }
 
+        .practitioner-caption {
+            text-align: center;
+            margin-top: 32px;
+            padding: 0 16px;
+        }
+
+        .practitioner-caption p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            word-break: keep-all;
+        }
+
         /* ==================== 프로필 섹션 ==================== */
         .profile-section {
             background: var(--bg-white);
@@ -512,6 +525,21 @@
 
         .profile-text {
             text-align: center;
+        }
+
+        .profile-name {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .profile-slogan {
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: var(--text-light);
+            letter-spacing: 0.02em;
+            margin-bottom: 28px;
         }
 
         .profile-text p {
@@ -727,6 +755,12 @@
             font-size: 0.9rem;
             color: rgba(255,255,255,0.6);
             margin-bottom: 28px;
+        }
+
+        .cta-note {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.45);
+            margin-top: 16px;
         }
 
         .cta-buttons {
@@ -1013,6 +1047,14 @@
                 border-radius: 14px;
             }
 
+            .practitioner-caption {
+                margin-top: 40px;
+            }
+
+            .practitioner-caption p {
+                font-size: 0.9rem;
+            }
+
             /* 프로필 */
             .profile-section {
                 padding: 80px 28px;
@@ -1033,6 +1075,14 @@
             .profile-text {
                 flex: 1;
                 text-align: left;
+            }
+
+            .profile-name {
+                font-size: 1.05rem;
+            }
+
+            .profile-slogan {
+                font-size: 0.85rem;
             }
 
             .profile-text p {
@@ -1358,6 +1408,14 @@
                 border-radius: 16px;
             }
 
+            .practitioner-caption {
+                margin-top: 48px;
+            }
+
+            .practitioner-caption p {
+                font-size: 0.92rem;
+            }
+
             /* 프로필 */
             .profile-section {
                 padding: 100px 48px;
@@ -1371,6 +1429,14 @@
             .profile-image {
                 flex: 0 0 320px;
                 border-radius: 16px;
+            }
+
+            .profile-name {
+                font-size: 1.1rem;
+            }
+
+            .profile-slogan {
+                font-size: 0.88rem;
             }
 
             .profile-text p {
@@ -1538,6 +1604,270 @@
                 font-size: 1.95rem;
             }
         }
+
+        /* ==================== 사전 참여 진단표 ==================== */
+        .checklist-section {
+            background: var(--bg-light);
+            padding: 56px 0;
+        }
+
+        .checklist-box {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 28px 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            margin-bottom: 24px;
+        }
+
+        .checklist-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-light);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checklist-item:hover {
+            background: var(--bg-light);
+            margin: 0 -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .checklist-checkbox {
+            display: none;
+        }
+
+        .checklist-checkmark {
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--border-light);
+            border-radius: 6px;
+            flex-shrink: 0;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .checklist-checkbox:checked + .checklist-checkmark {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .checklist-checkbox:checked + .checklist-checkmark::after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 11px;
+            border: solid var(--text-dark);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .checklist-text {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        .checklist-result {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 2px solid var(--border-light);
+            text-align: center;
+        }
+
+        .checklist-count {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .checklist-count span {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .checklist-message {
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            line-height: 1.6;
+            padding: 16px;
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+
+        .checklist-notice {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .checklist-notice p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .checklist-notice p:last-child {
+            margin-bottom: 0;
+        }
+
+        .checklist-cta {
+            text-align: center;
+        }
+
+        .checklist-cta .btn {
+            display: inline-block;
+            width: auto;
+            padding: 14px 32px;
+        }
+
+        /* Tablet */
+        @media (min-width: 641px) {
+            .checklist-section {
+                padding: 80px 0;
+            }
+
+            .checklist-box {
+                padding: 36px 32px;
+                border-radius: 18px;
+                max-width: 600px;
+                margin: 0 auto 32px;
+            }
+
+            .checklist-item {
+                padding: 18px 0;
+            }
+
+            .checklist-item:hover {
+                margin: 0 -32px;
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            .checklist-checkmark {
+                width: 24px;
+                height: 24px;
+            }
+
+            .checklist-text {
+                font-size: 0.95rem;
+            }
+
+            .checklist-count {
+                font-size: 0.95rem;
+            }
+
+            .checklist-message {
+                font-size: 1.05rem;
+                padding: 20px;
+            }
+
+            .checklist-notice p {
+                font-size: 0.9rem;
+            }
+
+            .checklist-cta .btn {
+                padding: 16px 40px;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1025px) {
+            .checklist-section {
+                padding: 100px 0;
+            }
+
+            .checklist-box {
+                padding: 44px 40px;
+                border-radius: 20px;
+                max-width: 680px;
+                margin: 0 auto 40px;
+            }
+
+            .checklist-item {
+                padding: 20px 0;
+                gap: 16px;
+            }
+
+            .checklist-item:hover {
+                margin: 0 -40px;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-radius: 8px;
+            }
+
+            .checklist-checkmark {
+                width: 26px;
+                height: 26px;
+                border-radius: 7px;
+            }
+
+            .checklist-checkbox:checked + .checklist-checkmark::after {
+                left: 7px;
+                top: 3px;
+                width: 7px;
+                height: 12px;
+            }
+
+            .checklist-text {
+                font-size: 1rem;
+            }
+
+            .checklist-result {
+                margin-top: 32px;
+                padding-top: 32px;
+            }
+
+            .checklist-count {
+                font-size: 1rem;
+            }
+
+            .checklist-count span {
+                font-size: 1.2rem;
+            }
+
+            .checklist-message {
+                font-size: 1.1rem;
+                padding: 24px;
+                border-radius: 12px;
+            }
+
+            .checklist-notice {
+                margin-bottom: 36px;
+            }
+
+            .checklist-notice p {
+                font-size: 0.92rem;
+            }
+
+            .checklist-cta .btn {
+                padding: 18px 48px;
+                font-size: 1rem;
+            }
+
+            .checklist-cta .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 30px rgba(255,214,0,0.3);
+            }
+        }
     </style>
 </head>
 <body>
@@ -1699,6 +2029,9 @@
                 <img src="sisulsajin/IMG_4634.jpg" alt="시술 작업 모습 3">
             </div>
         </div>
+        <div class="practitioner-caption">
+            <p>먼저 두피 상태를 살피고, 어울리는 라인을 함께 정한 뒤에야 작업을 시작합니다.<br>한 점을 찍기 전, 전체를 먼저 보는 시간이 더 깁니다.</p>
+        </div>
     </section>
 
     <!-- 프로필 -->
@@ -1708,9 +2041,91 @@
                 <img src="profile/IMG_3132.JPG" alt="프로필">
             </div>
             <div class="profile-text">
+                <p class="profile-name">원장 서아름</p>
+                <p class="profile-slogan">자연스러움이 자신감이 되는 곳</p>
                 <p>가르마 SMP는<br>기술보다 판단이 먼저라고 생각합니다.</p>
                 <p>그래서 빠르게 결과를 만들기보다<br>한 번 더 보고,<br>한 번 더 설명합니다.</p>
                 <p>눈에 띄지 않는 변화,<br>그게 가르마 SMP의 기준입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 사전 참여 진단표 -->
+    <section class="checklist-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">SELF-CHECK</span>
+                <h2 class="section-title">가르마 SMP 사전 참여 진단표</h2>
+                <p class="section-subtitle">아래 10개 항목 중 5개 이상 해당된다면<br>가르마 SMP를 고려해볼 수 있는 상태입니다.</p>
+            </div>
+
+            <div class="checklist-box">
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">탈모 진단은 아니지만 가르마가 넓어 보인다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">파우더/스타일링으로 가르마를 가리고 있다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">사진/조명 아래에서 가르마가 더 신경 쓰인다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">SMP를 검색해봤지만 티 날까 봐 망설였다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">풍성함보다 '안 보임'을 원한다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">한 번에 끝나는 변화보다 천천히 진행되는 쪽이 편하다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">가르마 위치가 비교적 일정하다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">지금 상태에서 더 진행되기 전 관리하고 싶다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">머리 묶거나 넘길 때 가르마가 신경 쓰인다</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" class="checklist-checkbox">
+                        <span class="checklist-checkmark"></span>
+                        <span class="checklist-text">조급함보다 신중한 선택을 원한다</span>
+                    </label>
+                </div>
+
+                <div class="checklist-result">
+                    <p class="checklist-count">선택된 항목: <span id="checkCount">0</span>개</p>
+                    <p class="checklist-message" id="checkMessage">항목을 선택해주세요.</p>
+                </div>
+            </div>
+
+            <div class="checklist-notice">
+                <p>이 진단표는 시술을 권유하기 위한 목적이 아니라,<br>현재 상태를 정리하기 위한 참고용입니다.</p>
+                <p>상담은 시술을 전제로 진행되지 않습니다.</p>
+            </div>
+
+            <div class="checklist-cta">
+                <a href="#" class="btn btn-primary">무료 상담 예약하기</a>
             </div>
         </div>
     </section>
@@ -1747,6 +2162,14 @@
                         <h4>괜히 했다가 후회하진 않을까요?</h4>
                     </div>
                     <p class="faq-a">후회의 대부분은 시술 자체보다 <strong>설명 부족</strong>에서 시작됩니다. 그래서 시술보다 먼저 적합 여부와 기대치를 먼저 안내합니다.</p>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-q">
+                        <span class="faq-q-icon">Q</span>
+                        <h4>시술은 어디서 진행되나요?</h4>
+                    </div>
+                    <p class="faq-a">시술은 <strong>배곧 맨즈핸즈 내부</strong>에서 진행됩니다. 샵인샵 구조로 운영되고 있으며, 상담 예약 후 정확한 위치와 안내를 드립니다.</p>
                 </div>
             </div>
         </div>
@@ -1804,8 +2227,7 @@
                         <img src="w brow/IMG_5923.JPG" alt="눈썹 문신 시술 사례 3">
                     </div>
                     <div class="gallery-item">
-                        <span class="gallery-item-icon">+</span>
-                        이미지 추가
+                        <img src="man.jpeg" alt="눈썹 문신 시술 사례 4">
                     </div>
                 </div>
             </div>
@@ -1846,9 +2268,10 @@
             <p class="cta-sub">시술 권유보다 기준과 판단부터 안내합니다.</p>
 
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">가르마 SMP 상담 신청하기</a>
-                <a href="#" class="btn btn-ghost">시술 전 체크 포인트 안내받기</a>
+                <a href="#" class="btn btn-primary">무료 상담 예약하기</a>
+                <a href="checklist.html" target="_blank" class="btn btn-ghost">시술 전 체크 포인트 안내받기</a>
             </div>
+            <p class="cta-note">상담 비용은 발생하지 않습니다.</p>
         </div>
     </section>
 
@@ -1861,5 +2284,35 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // 사전 참여 진단표 체크 기능
+        (function() {
+            const checkboxes = document.querySelectorAll('.checklist-checkbox');
+            const countDisplay = document.getElementById('checkCount');
+            const messageDisplay = document.getElementById('checkMessage');
+
+            function updateResult() {
+                const checkedCount = document.querySelectorAll('.checklist-checkbox:checked').length;
+                countDisplay.textContent = checkedCount;
+
+                let message = '';
+                if (checkedCount === 0) {
+                    message = '항목을 선택해주세요.';
+                } else if (checkedCount <= 3) {
+                    message = '아직은 가르마 SMP를 서두르지 않아도 되는 상태입니다.';
+                } else if (checkedCount <= 5) {
+                    message = '가르마 SMP를 고민해볼 수 있는 초기 단계입니다.';
+                } else {
+                    message = '현재 상태라면 가르마 SMP를 고려해보셔도 좋습니다.';
+                }
+                messageDisplay.textContent = message;
+            }
+
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', updateResult);
+            });
+        })();
+    </script>
 </body>
 </html>
