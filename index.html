@@ -1605,112 +1605,159 @@
             }
         }
 
-        /* ==================== 사전 참여 진단표 ==================== */
+        /* ==================== 사전 참여 진단표 (카드형 UI) ==================== */
         .checklist-section {
-            background: var(--bg-light);
+            background: var(--bg-white);
             padding: 56px 0;
         }
 
-        .checklist-box {
-            background: var(--bg-white);
-            border-radius: 16px;
-            padding: 28px 20px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-light);
-            margin-bottom: 24px;
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 32px;
         }
 
-        .checklist-items {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .checklist-item {
+        .checklist-card {
+            background: var(--bg-light);
+            border-radius: 14px;
+            padding: 20px;
             display: flex;
             align-items: center;
-            gap: 14px;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border-light);
+            gap: 16px;
             cursor: pointer;
-            transition: background 0.2s ease;
+            transition: all 0.25s ease;
+            border: 2px solid transparent;
         }
 
-        .checklist-item:last-child {
-            border-bottom: none;
+        .checklist-card:hover {
+            background: var(--bg-white);
+            border-color: var(--border-light);
+            box-shadow: var(--shadow-sm);
         }
 
-        .checklist-item:hover {
-            background: var(--bg-light);
-            margin: 0 -20px;
-            padding-left: 20px;
-            padding-right: 20px;
+        .checklist-card.selected {
+            background: var(--bg-white);
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(255, 214, 0, 0.15);
         }
 
-        .checklist-checkbox {
-            display: none;
-        }
-
-        .checklist-checkmark {
-            width: 22px;
-            height: 22px;
+        .checklist-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
             border: 2px solid var(--border-light);
-            border-radius: 6px;
             flex-shrink: 0;
-            position: relative;
-            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+            background: var(--bg-white);
         }
 
-        .checklist-checkbox:checked + .checklist-checkmark {
+        .checklist-card:hover .checklist-circle {
+            border-color: #ccc;
+        }
+
+        .checklist-card.selected .checklist-circle {
             background: var(--primary);
             border-color: var(--primary);
         }
 
-        .checklist-checkbox:checked + .checklist-checkmark::after {
-            content: "";
-            position: absolute;
-            left: 6px;
-            top: 2px;
-            width: 6px;
-            height: 11px;
-            border: solid var(--text-dark);
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
+        .checklist-circle-inner {
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--text-dark);
+            transition: all 0.2s ease;
         }
 
-        .checklist-text {
+        .checklist-card.selected .checklist-circle-inner {
+            width: 10px;
+            height: 10px;
+        }
+
+        .checklist-card-text {
             font-size: 0.9rem;
             color: var(--text-medium);
             line-height: 1.5;
+            flex: 1;
         }
 
-        .checklist-result {
-            margin-top: 24px;
-            padding-top: 24px;
-            border-top: 2px solid var(--border-light);
+        .checklist-card.selected .checklist-card-text {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .checklist-counter {
             text-align: center;
+            margin-bottom: 20px;
         }
 
-        .checklist-count {
+        .checklist-counter-text {
             font-size: 0.9rem;
             color: var(--text-light);
+        }
+
+        .checklist-counter-num {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0 4px;
+        }
+
+        .checklist-submit-btn {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto 24px;
+            padding: 16px 24px;
+            background: var(--bg-dark);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .checklist-submit-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .checklist-result-box {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            margin-bottom: 28px;
+            display: none;
+        }
+
+        .checklist-result-box.visible {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .checklist-result-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
             margin-bottom: 12px;
         }
 
-        .checklist-count span {
-            font-weight: 700;
-            color: var(--text-dark);
-            font-size: 1.1rem;
-        }
-
-        .checklist-message {
-            font-size: 1rem;
+        .checklist-result-message {
+            font-size: 1.05rem;
             color: var(--text-dark);
             font-weight: 500;
-            line-height: 1.6;
-            padding: 16px;
-            background: var(--bg-light);
-            border-radius: 10px;
+            line-height: 1.65;
         }
 
         .checklist-notice {
@@ -1719,10 +1766,10 @@
         }
 
         .checklist-notice p {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 8px;
+            line-height: 1.75;
+            margin-bottom: 6px;
         }
 
         .checklist-notice p:last-child {
@@ -1739,49 +1786,59 @@
             padding: 14px 32px;
         }
 
-        /* Tablet */
+        /* Tablet (2열 그리드) */
         @media (min-width: 641px) {
             .checklist-section {
                 padding: 80px 0;
             }
 
-            .checklist-box {
-                padding: 36px 32px;
-                border-radius: 18px;
-                max-width: 600px;
+            .checklist-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                max-width: 700px;
+                margin: 0 auto 40px;
+            }
+
+            .checklist-card {
+                padding: 22px 20px;
+                border-radius: 16px;
+            }
+
+            .checklist-circle {
+                width: 30px;
+                height: 30px;
+            }
+
+            .checklist-card.selected .checklist-circle-inner {
+                width: 12px;
+                height: 12px;
+            }
+
+            .checklist-card-text {
+                font-size: 0.92rem;
+            }
+
+            .checklist-counter-num {
+                font-size: 1.75rem;
+            }
+
+            .checklist-submit-btn {
+                max-width: 300px;
+                padding: 17px 28px;
+            }
+
+            .checklist-result-box {
+                padding: 32px 28px;
+                max-width: 500px;
                 margin: 0 auto 32px;
             }
 
-            .checklist-item {
-                padding: 18px 0;
-            }
-
-            .checklist-item:hover {
-                margin: 0 -32px;
-                padding-left: 32px;
-                padding-right: 32px;
-            }
-
-            .checklist-checkmark {
-                width: 24px;
-                height: 24px;
-            }
-
-            .checklist-text {
-                font-size: 0.95rem;
-            }
-
-            .checklist-count {
-                font-size: 0.95rem;
-            }
-
-            .checklist-message {
-                font-size: 1.05rem;
-                padding: 20px;
+            .checklist-result-message {
+                font-size: 1.1rem;
             }
 
             .checklist-notice p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .checklist-cta .btn {
@@ -1795,59 +1852,65 @@
                 padding: 100px 0;
             }
 
-            .checklist-box {
-                padding: 44px 40px;
-                border-radius: 20px;
-                max-width: 680px;
-                margin: 0 auto 40px;
+            .checklist-grid {
+                gap: 20px;
+                max-width: 800px;
+                margin: 0 auto 48px;
             }
 
-            .checklist-item {
-                padding: 20px 0;
-                gap: 16px;
+            .checklist-card {
+                padding: 24px 24px;
+                border-radius: 18px;
             }
 
-            .checklist-item:hover {
-                margin: 0 -40px;
-                padding-left: 40px;
-                padding-right: 40px;
-                border-radius: 8px;
+            .checklist-card:hover {
+                transform: translateY(-2px);
             }
 
-            .checklist-checkmark {
-                width: 26px;
-                height: 26px;
-                border-radius: 7px;
+            .checklist-circle {
+                width: 32px;
+                height: 32px;
             }
 
-            .checklist-checkbox:checked + .checklist-checkmark::after {
-                left: 7px;
-                top: 3px;
-                width: 7px;
-                height: 12px;
+            .checklist-card.selected .checklist-circle-inner {
+                width: 14px;
+                height: 14px;
             }
 
-            .checklist-text {
+            .checklist-card-text {
+                font-size: 0.95rem;
+            }
+
+            .checklist-counter {
+                margin-bottom: 24px;
+            }
+
+            .checklist-counter-text {
+                font-size: 0.95rem;
+            }
+
+            .checklist-counter-num {
+                font-size: 2rem;
+            }
+
+            .checklist-submit-btn {
+                max-width: 320px;
+                padding: 18px 32px;
                 font-size: 1rem;
             }
 
-            .checklist-result {
-                margin-top: 32px;
-                padding-top: 32px;
+            .checklist-submit-btn:hover {
+                box-shadow: 0 8px 24px rgba(0,0,0,0.15);
             }
 
-            .checklist-count {
-                font-size: 1rem;
+            .checklist-result-box {
+                padding: 36px 32px;
+                max-width: 560px;
+                border-radius: 18px;
             }
 
-            .checklist-count span {
-                font-size: 1.2rem;
-            }
-
-            .checklist-message {
-                font-size: 1.1rem;
-                padding: 24px;
-                border-radius: 12px;
+            .checklist-result-message {
+                font-size: 1.15rem;
             }
 
             .checklist-notice {
@@ -1855,7 +1918,7 @@
             }
 
             .checklist-notice p {
-                font-size: 0.92rem;
+                font-size: 0.88rem;
             }
 
             .checklist-cta .btn {
@@ -2059,64 +2122,80 @@
                 <p class="section-subtitle">아래 10개 항목 중 5개 이상 해당된다면<br>가르마 SMP를 고려해볼 수 있는 상태입니다.</p>
             </div>
 
-            <div class="checklist-box">
-                <div class="checklist-items">
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">탈모 진단은 아니지만 가르마가 넓어 보인다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">파우더/스타일링으로 가르마를 가리고 있다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">사진/조명 아래에서 가르마가 더 신경 쓰인다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">SMP를 검색해봤지만 티 날까 봐 망설였다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">풍성함보다 '안 보임'을 원한다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">한 번에 끝나는 변화보다 천천히 진행되는 쪽이 편하다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">가르마 위치가 비교적 일정하다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">지금 상태에서 더 진행되기 전 관리하고 싶다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">머리 묶거나 넘길 때 가르마가 신경 쓰인다</span>
-                    </label>
-                    <label class="checklist-item">
-                        <input type="checkbox" class="checklist-checkbox">
-                        <span class="checklist-checkmark"></span>
-                        <span class="checklist-text">조급함보다 신중한 선택을 원한다</span>
-                    </label>
+            <div class="checklist-grid">
+                <div class="checklist-card" data-index="0">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">탈모 진단은 아니지만 가르마가 넓어 보인다</span>
                 </div>
+                <div class="checklist-card" data-index="1">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">파우더/스타일링으로 가르마를 가리고 있다</span>
+                </div>
+                <div class="checklist-card" data-index="2">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">사진/조명 아래에서 가르마가 더 신경 쓰인다</span>
+                </div>
+                <div class="checklist-card" data-index="3">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">SMP를 검색해봤지만 티 날까 봐 망설였다</span>
+                </div>
+                <div class="checklist-card" data-index="4">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">풍성함보다 '안 보임'을 원한다</span>
+                </div>
+                <div class="checklist-card" data-index="5">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">한 번에 끝나는 변화보다 천천히 진행되는 쪽이 편하다</span>
+                </div>
+                <div class="checklist-card" data-index="6">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">가르마 위치가 비교적 일정하다</span>
+                </div>
+                <div class="checklist-card" data-index="7">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">지금 상태에서 더 진행되기 전 관리하고 싶다</span>
+                </div>
+                <div class="checklist-card" data-index="8">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">머리 묶거나 넘길 때 가르마가 신경 쓰인다</span>
+                </div>
+                <div class="checklist-card" data-index="9">
+                    <div class="checklist-circle">
+                        <div class="checklist-circle-inner"></div>
+                    </div>
+                    <span class="checklist-card-text">조급함보다 신중한 선택을 원한다</span>
+                </div>
+            </div>
 
-                <div class="checklist-result">
-                    <p class="checklist-count">선택된 항목: <span id="checkCount">0</span>개</p>
-                    <p class="checklist-message" id="checkMessage">항목을 선택해주세요.</p>
-                </div>
+            <div class="checklist-counter">
+                <span class="checklist-counter-text">선택된 항목</span>
+                <span class="checklist-counter-num" id="checkCount">0</span>
+                <span class="checklist-counter-text">/ 10</span>
+            </div>
+
+            <button class="checklist-submit-btn" id="checkSubmitBtn">진단 결과 보기</button>
+
+            <div class="checklist-result-box" id="checkResultBox">
+                <p class="checklist-result-label">진단 결과</p>
+                <p class="checklist-result-message" id="checkMessage"></p>
             </div>
 
             <div class="checklist-notice">
@@ -2286,31 +2365,48 @@
     </footer>
 
     <script>
-        // 사전 참여 진단표 체크 기능
+        // 사전 참여 진단표 카드형 UI 기능
         (function() {
-            const checkboxes = document.querySelectorAll('.checklist-checkbox');
+            const cards = document.querySelectorAll('.checklist-card');
             const countDisplay = document.getElementById('checkCount');
+            const submitBtn = document.getElementById('checkSubmitBtn');
+            const resultBox = document.getElementById('checkResultBox');
             const messageDisplay = document.getElementById('checkMessage');
 
-            function updateResult() {
-                const checkedCount = document.querySelectorAll('.checklist-checkbox:checked').length;
-                countDisplay.textContent = checkedCount;
+            // 카드 클릭 시 선택 토글
+            cards.forEach(function(card) {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('selected');
+                    updateCount();
+                });
+            });
 
-                let message = '';
-                if (checkedCount === 0) {
-                    message = '항목을 선택해주세요.';
-                } else if (checkedCount <= 3) {
-                    message = '아직은 가르마 SMP를 서두르지 않아도 되는 상태입니다.';
-                } else if (checkedCount <= 5) {
-                    message = '가르마 SMP를 고민해볼 수 있는 초기 단계입니다.';
-                } else {
-                    message = '현재 상태라면 가르마 SMP를 고려해보셔도 좋습니다.';
-                }
-                messageDisplay.textContent = message;
+            // 선택 개수 업데이트
+            function updateCount() {
+                const selectedCount = document.querySelectorAll('.checklist-card.selected').length;
+                countDisplay.textContent = selectedCount;
             }
 
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', updateResult);
+            // 진단 결과 보기 버튼 클릭
+            submitBtn.addEventListener('click', function() {
+                const selectedCount = document.querySelectorAll('.checklist-card.selected').length;
+
+                let message = '';
+                if (selectedCount === 0) {
+                    message = '항목을 선택해주세요.';
+                } else if (selectedCount <= 3) {
+                    message = '아직은 가르마 SMP를 서두르지 않아도 되는 상태입니다. 생활 습관 개선과 두피 관리로 충분히 개선될 수 있습니다.';
+                } else if (selectedCount <= 5) {
+                    message = '가르마 SMP를 고민해볼 수 있는 초기 단계입니다. 전문 상담을 통해 현재 상태를 정확히 파악해보시는 것을 권장합니다.';
+                } else {
+                    message = '현재 상태라면 가르마 SMP를 고려해보셔도 좋습니다. 시술 여부는 대면 상담 후 신중하게 결정하시기 바랍니다.';
+                }
+
+                messageDisplay.textContent = message;
+                resultBox.classList.add('visible');
+
+                // 결과 박스로 스크롤
+                resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         })();
     </script>
