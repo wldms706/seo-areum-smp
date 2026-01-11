@@ -485,6 +485,46 @@
             display: block;
         }
 
+        /* ==================== 프로필 섹션 ==================== */
+        .profile-section {
+            background: var(--bg-white);
+            padding: 56px 16px;
+        }
+
+        .profile-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .profile-text {
+            text-align: center;
+        }
+
+        .profile-text p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.85;
+            word-break: keep-all;
+        }
+
+        .profile-text p + p {
+            margin-top: 20px;
+        }
+
         /* ==================== FAQ 섹션 ==================== */
         .faq {
             background: var(--bg-light);
@@ -973,6 +1013,32 @@
                 border-radius: 14px;
             }
 
+            /* 프로필 */
+            .profile-section {
+                padding: 80px 28px;
+            }
+
+            .profile-layout {
+                flex-direction: row;
+                align-items: center;
+                gap: 48px;
+                max-width: 800px;
+            }
+
+            .profile-image {
+                flex: 0 0 280px;
+                border-radius: 14px;
+            }
+
+            .profile-text {
+                flex: 1;
+                text-align: left;
+            }
+
+            .profile-text p {
+                font-size: 1rem;
+            }
+
             /* FAQ */
             .faq-grid {
                 gap: 18px;
@@ -1290,6 +1356,26 @@
 
             .practitioner-item {
                 border-radius: 16px;
+            }
+
+            /* 프로필 */
+            .profile-section {
+                padding: 100px 48px;
+            }
+
+            .profile-layout {
+                gap: 64px;
+                max-width: 900px;
+            }
+
+            .profile-image {
+                flex: 0 0 320px;
+                border-radius: 16px;
+            }
+
+            .profile-text p {
+                font-size: 1.05rem;
+                line-height: 1.9;
             }
 
             /* FAQ */
@@ -1611,6 +1697,20 @@
             </div>
             <div class="practitioner-item">
                 <img src="sisulsajin/IMG_4634.jpg" alt="시술 작업 모습 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로필 -->
+    <section class="profile-section">
+        <div class="profile-layout">
+            <div class="profile-image">
+                <img src="profile/IMG_3132.JPG" alt="프로필">
+            </div>
+            <div class="profile-text">
+                <p>가르마 SMP는<br>기술보다 판단이 먼저라고 생각합니다.</p>
+                <p>그래서 빠르게 결과를 만들기보다<br>한 번 더 보고,<br>한 번 더 설명합니다.</p>
+                <p>눈에 띄지 않는 변화,<br>그게 가르마 SMP의 기준입니다.</p>
             </div>
         </div>
     </section>
