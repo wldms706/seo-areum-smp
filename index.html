@@ -344,6 +344,36 @@
             font-weight: 700;
         }
 
+        /* ==================== 줌인 영상 섹션 ==================== */
+        .zoomin-video-section {
+            position: relative;
+            height: 45vh;
+            min-height: 280px;
+            max-height: 420px;
+            overflow: hidden;
+        }
+
+        .zoomin-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .zoomin-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
         /* ==================== 제한 섹션 ==================== */
         .limitation {
             background: var(--bg-white);
@@ -855,6 +885,13 @@
                 font-size: 1.15rem;
             }
 
+            /* 줌인 영상 */
+            .zoomin-video-section {
+                height: 48vh;
+                min-height: 320px;
+                max-height: 480px;
+            }
+
             /* 제한 */
             .limitation-layout {
                 flex-direction: row;
@@ -1140,6 +1177,13 @@
                 font-size: 1.28rem;
             }
 
+            /* 줌인 영상 */
+            .zoomin-video-section {
+                height: 50vh;
+                min-height: 360px;
+                max-height: 540px;
+            }
+
             /* 제한 */
             .limitation-layout {
                 gap: 48px;
@@ -1351,7 +1395,6 @@
         <div class="hero-content">
             <span class="hero-badge">여자 가르마 SMP 전문</span>
             <h1>탈모는 아닌데,<br class="mobile-br">가르마가 유난히<br class="mobile-br">비어 보이는 날이<br>있지 않나요?</h1>
-            <p class="hero-sub">파우더, 스프레이, 볼륨펌으로 버티는 단계를 지나셨다면</p>
         </div>
     </section>
 
@@ -1445,6 +1488,14 @@
                 <p>가르마 SMP의 핵심은<br><strong>'얼마나 채우느냐'가 아니라<br>'얼마나 안 보이느냐'</strong>입니다.</p>
             </div>
         </div>
+    </section>
+
+    <!-- 줌인 분위기 영상 -->
+    <section class="zoomin-video-section">
+        <video class="zoomin-video" autoplay muted loop playsinline loading="lazy" preload="metadata" poster="profile/IMG_3132.JPG">
+            <source src="zoomin.mp4" type="video/mp4">
+        </video>
+        <div class="zoomin-video-overlay"></div>
     </section>
 
     <!-- 제한/기준 -->
