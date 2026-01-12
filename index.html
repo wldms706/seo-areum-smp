@@ -1938,13 +1938,38 @@
             padding: 56px 0;
         }
 
+        /* PC용 지도 - 모바일에서 숨김 */
+        .location-map-pc {
+            display: none;
+        }
+
         .location-map {
             width: 100%;
-            height: 300px;
+            height: 360px;
             border-radius: 16px;
             border: none;
             margin-bottom: 20px;
             box-shadow: var(--shadow-sm);
+        }
+
+        /* 모바일용 버튼 */
+        .location-mobile-btn {
+            display: block;
+            background: var(--bg-dark);
+            color: white;
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .location-mobile-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
         }
 
         .location-notice {
@@ -1956,26 +1981,25 @@
         }
 
         .location-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.9rem;
-            color: var(--text-medium);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .location-link:hover {
-            color: var(--text-dark);
+            display: none;
         }
 
         .location-link-wrap {
             text-align: center;
         }
 
-        @media (min-width: 641px) {
+        /* Tablet 이상 - 지도 표시, 버튼 숨김 */
+        @media (min-width: 769px) {
             .location-section {
                 padding: 80px 0;
+            }
+
+            .location-map-pc {
+                display: block;
+            }
+
+            .location-mobile-btn {
+                display: none;
             }
 
             .location-map {
@@ -1985,6 +2009,20 @@
 
             .location-notice {
                 font-size: 0.88rem;
+            }
+
+            .location-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 0.9rem;
+                color: var(--text-medium);
+                text-decoration: none;
+                transition: color 0.2s ease;
+            }
+
+            .location-link:hover {
+                color: var(--text-dark);
             }
         }
 
@@ -2439,11 +2477,20 @@
                 <h2 class="section-title">오시는 길</h2>
             </div>
 
-            <iframe
-                class="location-map"
-                src="https://map.naver.com/p/entry/place/2041765964"
-                allowfullscreen>
-            </iframe>
+            <!-- PC용 지도 (768px 이상) -->
+            <div class="location-map-pc">
+                <iframe
+                    class="location-map"
+                    src="https://map.naver.com/p/entry/place/2041765964"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- 모바일용 버튼 (768px 미만) -->
+            <a href="https://map.naver.com/p/entry/place/2041765964" target="_blank" class="location-mobile-btn">
+                네이버 지도 앱으로 열기 →
+            </a>
 
             <p class="location-notice">※ 샵인샵 형태로 운영 중이며, 방문 전 안내드립니다.</p>
 
