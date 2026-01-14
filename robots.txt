@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://md-aruem753.co.kr/sitemap.xml
