@@ -1,6 +1,4 @@
 {
-  "routes": [
-    { "src": "/sitemap\\.xml", "dest": "/public/sitemap.xml" },
-    { "src": "/robots\\.txt", "dest": "/robots.txt" }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false
 }
