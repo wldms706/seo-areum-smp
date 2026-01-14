@@ -2,6 +2,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
-    { "src": "/sitemap\\.xml", "dest": "/public/sitemap.xml" }
+    { "src": "/sitemap\\.xml", "dest": "/_static/sitemap.xml" }
   ]
 }
