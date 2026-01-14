@@ -1,3 +1,5 @@
 {
-  "trailingSlash": false
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": "."
 }
