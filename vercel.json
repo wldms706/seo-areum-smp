@@ -1,7 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    { "src": "/sitemap\\.xml", "dest": "/_static/sitemap.xml" }
+  "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/_static/sitemap.xml" }
   ]
 }
