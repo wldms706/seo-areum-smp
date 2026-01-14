@@ -1,7 +1,6 @@
 {
-  "outputDirectory": ".",
   "routes": [
-    { "src": "/sitemap\\.xml", "dest": "/sitemap.xml" },
+    { "src": "/sitemap\\.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots\\.txt", "dest": "/robots.txt" }
   ]
 }
