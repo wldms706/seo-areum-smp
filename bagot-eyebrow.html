@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 네이버 사이트 인증 -->
+    <meta name="naver-site-verification" content="97a61c4e123587c28f64bfeb64b40d8672cb505d" />
+
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="배곧 눈썹문신 전문 샵 맨즈핸즈. 부원장 서아름이 얼굴형에 맞춰 자연스럽게 디자인합니다." />
+    <meta name="keywords" content="배곧 눈썹문신, 배곧 반영구, 배곧 눈썹, 시흥 눈썹문신, 맨즈핸즈, 서아름" />
+
+    <!-- Open Graph 태그 -->
+    <meta property="og:title" content="배곧 눈썹문신 전문 | 맨즈핸즈 부원장 서아름" />
+    <meta property="og:description" content="배곧 눈썹문신 전문 샵 맨즈핸즈. 부원장 서아름이 얼굴형에 맞춰 자연스럽게 디자인합니다." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://md-aruem753.co.kr/bagot-eyebrow" />
+
+    <title>배곧 눈썹문신 전문 | 맨즈핸즈 부원장 서아름</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="canonical" href="https://md-aruem753.co.kr/bagot-eyebrow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background-color: #fafafa;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        :root {
+            --primary: #FFD600;
+            --primary-dark: #E6C200;
+            --primary-light: #FFF8DC;
+            --text-dark: #111;
+            --text-medium: #444;
+            --text-light: #777;
+            --bg-white: #ffffff;
+            --bg-light: #f7f7f7;
+            --bg-dark: #111;
+            --border-light: #e5e5e5;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            padding: 48px 24px;
+            max-width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary);
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+            margin-bottom: 16px;
+            word-break: keep-all;
+        }
+
+        .hero-sub {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+            line-height: 1.7;
+            word-break: keep-all;
+        }
+
+        /* 공통 섹션 스타일 */
+        section {
+            padding: 56px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .section-number {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 400;
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+
+        /* 인트로 섹션 */
+        .intro-section {
+            background: var(--bg-white);
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: var(--text-medium);
+            word-break: keep-all;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .intro-text strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* 시술 대상 섹션 */
+        .target-section {
+            background: var(--bg-light);
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .target-card {
+            background: var(--bg-white);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .target-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .target-card h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+
+        .target-card p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* 차별점 섹션 */
+        .diff-section {
+            background: var(--bg-white);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .diff-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .diff-number {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 32px;
+            margin-bottom: 14px;
+        }
+
+        .diff-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .diff-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* 갤러리 섹션 */
+        .gallery-section {
+            background: var(--bg-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 프로필 섹션 */
+        .profile-section {
+            background: var(--bg-white);
+        }
+
+        .profile-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .profile-text {
+            text-align: center;
+        }
+
+        .profile-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .profile-desc {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.8;
+            word-break: keep-all;
+        }
+
+        /* CTA 섹션 */
+        .cta {
+            background: var(--bg-dark);
+            padding: 56px 16px;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            background: rgba(255,214,0,0.15);
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .cta h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            word-break: keep-all;
+        }
+
+        .cta-sub {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--text-dark);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: rgba(255,255,255,0.8);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .cta-note {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.45);
+            margin-top: 16px;
+        }
+
+        /* 위치 안내 */
+        .location-section {
+            background: var(--bg-light);
+        }
+
+        .location-info {
+            text-align: center;
+        }
+
+        .location-info p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .location-btn {
+            display: inline-block;
+            padding: 14px 24px;
+            background: #03C75A;
+            color: white;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .location-btn:hover {
+            background: #02b350;
+            transform: translateY(-2px);
+        }
+
+        /* 푸터 */
+        footer {
+            background: #0a0a0a;
+            padding: 36px 16px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .footer-info {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        /* Tablet (641px ~ 1024px) */
+        @media (min-width: 641px) {
+            .container {
+                padding: 0 28px;
+            }
+
+            .hero {
+                min-height: 55vh;
+            }
+
+            .hero-content {
+                padding: 64px 40px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-sub {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .intro-text {
+                font-size: 1rem;
+            }
+
+            .target-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .target-card {
+                padding: 24px;
+            }
+
+            .diff-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+
+            .diff-card {
+                padding: 28px 24px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+            }
+
+            .profile-layout {
+                flex-direction: row;
+                align-items: center;
+                gap: 40px;
+                max-width: 700px;
+            }
+
+            .profile-image {
+                flex: 0 0 240px;
+            }
+
+            .profile-text {
+                text-align: left;
+            }
+
+            .cta {
+                padding: 80px 28px;
+            }
+
+            .cta-content {
+                max-width: 480px;
+            }
+
+            .cta h2 {
+                font-size: 1.65rem;
+            }
+
+            .cta-buttons {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Desktop (>=1025px) */
+        @media (min-width: 1025px) {
+            .container {
+                max-width: 1100px;
+                padding: 0 48px;
+            }
+
+            .hero {
+                min-height: 60vh;
+            }
+
+            .hero-content {
+                padding: 80px 56px;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            section {
+                padding: 100px 0;
+            }
+
+            .section-title {
+                font-size: 1.85rem;
+            }
+
+            .intro-text {
+                font-size: 1.05rem;
+            }
+
+            .target-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+
+            .target-card:hover {
+                border-color: var(--primary);
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-md);
+            }
+
+            .diff-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+
+            .diff-card:hover {
+                border-color: var(--primary);
+                background: var(--bg-white);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+
+            .profile-layout {
+                gap: 56px;
+                max-width: 800px;
+            }
+
+            .profile-image {
+                flex: 0 0 280px;
+            }
+
+            .cta {
+                padding: 100px 48px;
+            }
+
+            .cta-content {
+                max-width: 560px;
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+
+            .btn:hover {
+                transform: translateY(-2px);
+            }
+
+            .btn-primary:hover {
+                box-shadow: 0 8px 30px rgba(255,214,0,0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">배곧 눈썹문신 전문</span>
+            <h1>배곧 눈썹문신 전문 맨즈핸즈</h1>
+            <p class="hero-sub">얼굴형에 맞춘 자연스러운 디자인,<br>부원장 서아름이 직접 상담부터 시술까지 진행합니다.</p>
+        </div>
+    </section>
+
+    <!-- 인트로 섹션 -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-text">
+                <p>
+                    <strong>배곧 눈썹문신</strong>을 찾고 계신다면, 맨즈핸즈 부원장 서아름의 시술을 추천드립니다.
+                    배곧에서 자연스러운 눈썹 라인을 원하시는 분들께 <strong>배곧 눈썹문신</strong> 전문 샵으로서
+                    얼굴형과 피부톤에 맞춘 맞춤 디자인을 제공하고 있습니다.
+                    <strong>배곧 눈썹문신</strong>은 단순히 눈썹을 그리는 것이 아니라,
+                    개인의 이미지와 조화를 이루는 자연스러운 결과를 목표로 합니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 시술 대상 섹션 -->
+    <section class="target-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">FOR YOU</span>
+                <h2 class="section-title">이런 분들께 추천드립니다</h2>
+                <p class="section-subtitle">눈썹으로 인상이 달라지는 경험</p>
+            </div>
+
+            <div class="target-grid">
+                <div class="target-card">
+                    <div class="target-icon">✏️</div>
+                    <div>
+                        <h4>눈썹 그리기가 어려운 분</h4>
+                        <p>매일 아침 시간 단축</p>
+                    </div>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">🌊</div>
+                    <div>
+                        <h4>눈썹이 옅거나 빈 곳이 있는 분</h4>
+                        <p>자연스러운 밀도 보완</p>
+                    </div>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">💧</div>
+                    <div>
+                        <h4>땀이나 물에 지워지는 게 불편한 분</h4>
+                        <p>운동·수영 걱정 없이</p>
+                    </div>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">✨</div>
+                    <div>
+                        <h4>또렷하고 세련된 인상을 원하는 분</h4>
+                        <p>얼굴형에 맞춘 디자인</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 차별점 섹션 -->
+    <section class="diff-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">DIFFERENCE</span>
+                <h2 class="section-title">맨즈핸즈 눈썹문신의 차별점</h2>
+                <p class="section-subtitle">자연스러움을 위한 세심한 기준</p>
+            </div>
+
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <span class="diff-number">01</span>
+                    <h4>얼굴형 맞춤 디자인</h4>
+                    <p>황금비율이 아닌 개인별 조화를 최우선으로</p>
+                </div>
+                <div class="diff-card">
+                    <span class="diff-number">02</span>
+                    <h4>자연스러운 결 표현</h4>
+                    <p>실제 눈썹처럼 한 올 한 올 섬세하게</p>
+                </div>
+                <div class="diff-card">
+                    <span class="diff-number">03</span>
+                    <h4>피부톤 맞춤 색상</h4>
+                    <p>시간이 지나도 자연스러운 발색 유지</p>
+                </div>
+                <div class="diff-card">
+                    <span class="diff-number">04</span>
+                    <h4>충분한 사전 상담</h4>
+                    <p>시술 전 디자인 확인 후 진행</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 갤러리 섹션 -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PORTFOLIO</span>
+                <h2 class="section-title">눈썹문신 시술 사례</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="w brow/IMG_5913.JPG" alt="배곧 눈썹문신 시술 사례 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="w brow/IMG_5917.JPG" alt="배곧 눈썹문신 시술 사례 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="w brow/IMG_5923.JPG" alt="배곧 눈썹문신 시술 사례 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="man.jpeg" alt="배곧 눈썹문신 시술 사례 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로필 섹션 -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">PRACTITIONER</span>
+                <h2 class="section-title">시술자 소개</h2>
+            </div>
+
+            <div class="profile-layout">
+                <div class="profile-image">
+                    <img src="profile/IMG_3132.JPG" alt="맨즈핸즈 부원장 서아름">
+                </div>
+                <div class="profile-text">
+                    <p class="profile-name">맨즈핸즈 부원장 서아름</p>
+                    <p class="profile-desc">
+                        눈썹문신은 단순히 눈썹을 그리는 것이 아니라<br>
+                        얼굴 전체의 인상을 결정하는 작업입니다.<br><br>
+                        그래서 한 분 한 분 얼굴형을 분석하고,<br>
+                        자연스러운 조화를 먼저 고민합니다.<br><br>
+                        티 나지 않으면서 달라 보이는 변화,<br>
+                        그것이 제가 추구하는 눈썹문신입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="cta">
+        <div class="cta-content">
+            <span class="cta-badge">무료 상담</span>
+            <h2>배곧 눈썹문신,<br>상담부터 시작해보세요</h2>
+            <p class="cta-sub">내 얼굴형에 어떤 눈썹이 어울릴지<br>부담 없이 상담받아 보세요.</p>
+
+            <div class="cta-buttons">
+                <a href="https://pf.kakao.com/_xlxoScn" target="_blank" class="btn btn-primary">카카오톡 무료 상담</a>
+                <a href="index.html" class="btn btn-secondary">맨즈핸즈 메인 페이지</a>
+            </div>
+            <p class="cta-note">상담 비용은 발생하지 않습니다.</p>
+        </div>
+    </section>
+
+    <!-- 위치 안내 섹션 -->
+    <section class="location-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">LOCATION</span>
+                <h2 class="section-title">오시는 길</h2>
+            </div>
+
+            <div class="location-info">
+                <p>
+                    배곧 맨즈핸즈 내부에서 시술이 진행됩니다.<br>
+                    샵인샵 형태로 운영되며, 상담 예약 시 정확한 위치를 안내드립니다.
+                </p>
+                <a href="https://map.naver.com/p/entry/place/2041765964" target="_blank" class="location-btn">
+                    네이버 지도에서 위치 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-brand">맨즈핸즈 부원장 서아름</span>
+                <a href="index.html" class="footer-link">메인 페이지로 돌아가기</a>
+                <span class="footer-info">© 2025 All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
