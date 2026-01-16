@@ -6,21 +6,128 @@
   <title>포트폴리오 | 배곧 SMP 맨즈핸즈</title>
   <meta name="description" content="배곧 SMP 포트폴리오. 자연스러운 밀도 표현과 라인 정리 중심의 결과 사진을 확인하세요." />
   <link rel="canonical" href="https://md-aruem753.co.kr/portfolio/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; color: #222; background: #fafafa; }
+
+    .site-header { position: sticky; top: 0; z-index: 999; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,.06); }
+    .header-inner { max-width: 1080px; margin: 0 auto; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { font-weight: 800; letter-spacing: -0.02em; text-decoration: none; color: #111; }
+    .site-nav { display: flex; gap: 14px; flex-wrap: wrap; }
+    .site-nav a { text-decoration: none; color: #111; font-weight: 600; padding: 8px 10px; border-radius: 10px; }
+    .site-nav a:hover { background: rgba(0,0,0,.05); }
+
+    .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 60px 20px; text-align: center; }
+    .hero h1 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .hero p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+    .category-section { padding: 60px 0; }
+    .category-section:nth-child(even) { background: #fff; }
+    .section-header { text-align: center; margin-bottom: 36px; }
+    .section-badge { display: inline-block; background: #FFD600; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 12px; }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: #111; margin-bottom: 8px; }
+    .section-desc { font-size: 0.9rem; color: #777; }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .gallery-item { aspect-ratio: 1; border-radius: 12px; overflow: hidden; border: 1px solid #e5e5e5; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+    .cta-section { padding: 60px 20px; background: #111; text-align: center; }
+    .cta-section h2 { font-size: 1.2rem; color: #fff; margin-bottom: 12px; }
+    .cta-section p { color: rgba(255,255,255,0.6); margin-bottom: 24px; font-size: 0.9rem; }
+    .btn { display: inline-block; padding: 16px 32px; background: #FFD600; color: #111; font-weight: 600; text-decoration: none; border-radius: 12px; }
+    .btn:hover { background: #E6C200; }
+
+    @media (min-width: 641px) {
+      .hero h1 { font-size: 1.8rem; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    }
+
+    @media (min-width: 1025px) {
+      .hero { padding: 80px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .category-section { padding: 80px 0; }
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    }
+  </style>
 </head>
 <body>
-  <header style="padding:16px 18px;border-bottom:1px solid #eee;">
-    <a href="/" style="text-decoration:none;font-weight:800;color:#111;">맨즈핸즈</a>
-    <nav style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="/about/">소개</a>
-      <a href="/portfolio/">포트폴리오</a>
-      <a href="/contact/">상담</a>
-      <a href="/location/">위치</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">맨즈핸즈</a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="/about/">소개</a>
+        <a href="/portfolio/">포트폴리오</a>
+        <a href="/contact/">상담</a>
+        <a href="/location/">위치</a>
+      </nav>
+    </div>
   </header>
 
-  <main style="max-width:960px;margin:0 auto;padding:28px 18px;">
+  <section class="hero">
     <h1>포트폴리오</h1>
-    <p>배곧 SMP 결과를 모았습니다. (여기에 before/after 이미지 섹션 추가)</p>
-  </main>
+    <p>자연스러움을 최우선으로 한 시술 결과입니다</p>
+  </section>
+
+  <section class="category-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">SMP</span>
+        <h2 class="section-title">가르마 SMP</h2>
+        <p class="section-desc">가르마 라인을 따라 자연스럽게 밀도를 보완합니다</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="/smp/smp-01.jpeg" alt="가르마 SMP 시술 사례 1"></div>
+        <div class="gallery-item"><img src="/smp/smp-02.jpeg" alt="가르마 SMP 시술 사례 2"></div>
+        <div class="gallery-item"><img src="/smp/smp-03.jpeg" alt="가르마 SMP 시술 사례 3"></div>
+        <div class="gallery-item"><img src="/smp/smp-04.jpeg" alt="가르마 SMP 시술 사례 4"></div>
+        <div class="gallery-item"><img src="/smp/smp-05.jpeg" alt="가르마 SMP 시술 사례 5"></div>
+        <div class="gallery-item"><img src="/smp/smp-06.jpeg" alt="가르마 SMP 시술 사례 6"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">눈썹문신</span>
+        <h2 class="section-title">여성 눈썹문신</h2>
+        <p class="section-desc">얼굴형에 맞춰 자연스러운 눈썹 라인을 완성합니다</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="/w brow/IMG_5913.JPG" alt="여성 눈썹문신 시술 사례 1"></div>
+        <div class="gallery-item"><img src="/w brow/IMG_5917.JPG" alt="여성 눈썹문신 시술 사례 2"></div>
+        <div class="gallery-item"><img src="/w brow/IMG_5923.JPG" alt="여성 눈썹문신 시술 사례 3"></div>
+        <div class="gallery-item"><img src="/man.jpeg" alt="남성 눈썹문신 시술 사례"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">시술 환경</span>
+        <h2 class="section-title">시술 과정</h2>
+        <p class="section-desc">위생적이고 편안한 환경에서 진행됩니다</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="/procedure/DSC03111.JPG" alt="시술 환경 1"></div>
+        <div class="gallery-item"><img src="/procedure/DSC03163.JPG" alt="시술 환경 2"></div>
+        <div class="gallery-item"><img src="/procedure/DSC03171.JPG" alt="시술 환경 3"></div>
+        <div class="gallery-item"><img src="/sisulsajin/IMG_4632.jpg" alt="시술 과정 1"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>나에게 맞는 시술이 궁금하신가요?</h2>
+    <p>카카오톡으로 부담 없이 상담받아 보세요</p>
+    <a href="http://pf.kakao.com/_eeRxexj" target="_blank" class="btn">카카오톡 상담하기</a>
+  </section>
 </body>
 </html>

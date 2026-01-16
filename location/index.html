@@ -6,28 +6,143 @@
   <title>위치 | 배곧 맨즈핸즈</title>
   <meta name="description" content="배곧 맨즈핸즈 위치 안내. 오시는 길과 네이버 지도에서 길찾기를 확인하세요." />
   <link rel="canonical" href="https://md-aruem753.co.kr/location/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; color: #222; background: #fafafa; }
+
+    .site-header { position: sticky; top: 0; z-index: 999; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,.06); }
+    .header-inner { max-width: 1080px; margin: 0 auto; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { font-weight: 800; letter-spacing: -0.02em; text-decoration: none; color: #111; }
+    .site-nav { display: flex; gap: 14px; flex-wrap: wrap; }
+    .site-nav a { text-decoration: none; color: #111; font-weight: 600; padding: 8px 10px; border-radius: 10px; }
+    .site-nav a:hover { background: rgba(0,0,0,.05); }
+
+    .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 60px 20px; text-align: center; }
+    .hero h1 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .hero p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    .location-section { padding: 60px 0; background: #fff; }
+    .location-card { background: #f7f7f7; border-radius: 16px; padding: 32px 24px; margin-bottom: 24px; }
+    .location-title { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .location-title::before { content: "📍"; }
+    .location-info { font-size: 0.95rem; color: #444; line-height: 1.8; }
+    .location-info strong { color: #111; }
+
+    .info-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+    .info-item { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 20px; }
+    .info-label { font-size: 0.8rem; color: #777; margin-bottom: 6px; }
+    .info-value { font-size: 0.95rem; font-weight: 500; color: #111; }
+
+    .map-section { padding: 40px 0 60px; }
+    .map-buttons { display: flex; flex-direction: column; gap: 12px; }
+    .map-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 24px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.2s; }
+    .map-btn.naver { background: #03C75A; color: #fff; }
+    .map-btn.naver:hover { background: #02b350; }
+    .map-btn.kakao { background: #FEE500; color: #111; }
+    .map-btn.kakao:hover { background: #E6CF00; }
+
+    .notice-section { padding: 40px 0 60px; }
+    .notice-card { background: #FFF8DC; border: 1px solid #FFD600; border-radius: 12px; padding: 24px; }
+    .notice-title { font-size: 0.9rem; font-weight: 600; color: #111; margin-bottom: 12px; }
+    .notice-text { font-size: 0.85rem; color: #666; line-height: 1.7; }
+
+    .cta-section { padding: 60px 20px; background: #111; text-align: center; }
+    .cta-section h2 { font-size: 1.2rem; color: #fff; margin-bottom: 12px; }
+    .cta-section p { color: rgba(255,255,255,0.6); margin-bottom: 24px; font-size: 0.9rem; }
+    .btn { display: inline-block; padding: 16px 32px; background: #FFD600; color: #111; font-weight: 600; text-decoration: none; border-radius: 12px; }
+    .btn:hover { background: #E6C200; }
+
+    @media (min-width: 641px) {
+      .hero h1 { font-size: 1.8rem; }
+      .info-grid { grid-template-columns: repeat(2, 1fr); }
+      .map-buttons { flex-direction: row; }
+      .map-btn { flex: 1; }
+    }
+
+    @media (min-width: 1025px) {
+      .hero { padding: 80px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .location-section { padding: 80px 0; }
+    }
+  </style>
 </head>
 <body>
-  <header style="padding:16px 18px;border-bottom:1px solid #eee;">
-    <a href="/" style="text-decoration:none;font-weight:800;color:#111;">맨즈핸즈</a>
-    <nav style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="/about/">소개</a>
-      <a href="/portfolio/">포트폴리오</a>
-      <a href="/contact/">상담</a>
-      <a href="/location/">위치</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">맨즈핸즈</a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="/about/">소개</a>
+        <a href="/portfolio/">포트폴리오</a>
+        <a href="/contact/">상담</a>
+        <a href="/location/">위치</a>
+      </nav>
+    </div>
   </header>
 
-  <main style="max-width:960px;margin:0 auto;padding:28px 18px;">
-    <h1>위치</h1>
-    <p>배곧 맨즈핸즈 오시는 길 안내입니다.</p>
+  <section class="hero">
+    <h1>오시는 길</h1>
+    <p>배곧 맨즈핸즈에서 시술이 진행됩니다</p>
+  </section>
 
-    <p style="margin-top:12px;">
-      <a href="https://map.naver.com/p/entry/place/2041765964" target="_blank" rel="noopener"
-         style="text-decoration:none;font-weight:700;">
-        네이버 지도에서 길찾기
-      </a>
-    </p>
-  </main>
+  <section class="location-section">
+    <div class="container">
+      <div class="location-card">
+        <h2 class="location-title">맨즈핸즈 배곧점</h2>
+        <p class="location-info">
+          <strong>주소:</strong> 경기도 시흥시 배곧동<br>
+          <strong>운영:</strong> 샵인샵 형태로 운영<br><br>
+          상담 예약 시 정확한 위치와 주차 안내를 드립니다.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <p class="info-label">운영 시간</p>
+          <p class="info-value">예약제 운영 (상담 후 안내)</p>
+        </div>
+        <div class="info-item">
+          <p class="info-label">주차</p>
+          <p class="info-value">건물 내 주차 가능</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="container">
+      <div class="map-buttons">
+        <a href="https://map.naver.com/p/entry/place/2041765964" target="_blank" rel="noopener" class="map-btn naver">
+          네이버 지도에서 보기
+        </a>
+        <a href="https://place.map.kakao.com/2041765964" target="_blank" rel="noopener" class="map-btn kakao">
+          카카오맵에서 보기
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice-section">
+    <div class="container">
+      <div class="notice-card">
+        <p class="notice-title">방문 전 안내</p>
+        <p class="notice-text">
+          시술은 완전 예약제로 운영됩니다.<br>
+          방문 전 카카오톡으로 상담 및 예약을 진행해주세요.<br>
+          예약 확정 후 상세 위치와 주차 안내를 드립니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>방문 상담을 원하시나요?</h2>
+    <p>카카오톡으로 예약해주세요</p>
+    <a href="http://pf.kakao.com/_eeRxexj" target="_blank" class="btn">카카오톡 예약하기</a>
+  </section>
 </body>
 </html>
